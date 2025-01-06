@@ -35,4 +35,57 @@ const estudiante = {
 // Aquí `estudiante` es un objeto literal con claves: nombre, edad, cursos, y saludar.
 ```
 
+# Explicación de `Object.entries()`
+
+## ¿Qué hace el código?
+
+```javascript
+const entriesPares = Object.entries(personaje);
+
+El método Object.entries() toma un objeto y devuelve un array de pares clave-valor de ese objeto. Cada par es un array en sí mismo.
+
+Ejemplo práctico
+
+Supongamos que tienes un objeto llamado personaje:
+
+const personaje = {
+  nombre: "Mario",
+  edad: 35,
+  ocupacion: "Plomero",
+};
+
+Al ejecutar:
+
+const entriesPares = Object.entries(personaje);
+console.log(entriesPares);
+
+Obtendrás:
+
+[
+  ["nombre", "Mario"],
+  ["edad", 35],
+  ["ocupacion", "Plomero"]
+]
+
+¿Para qué sirve?
+
+1. Recorrer un objeto
+
+Puedes usarlo para iterar sobre las claves y valores de un objeto:
+
+for (const [clave, valor] of entriesPares) {
+  console.log(`${clave}: ${valor}`);
+}
+// Resultado:
+// nombre: Mario
+// edad: 35
+// ocupacion: Plomero
+
+2. Transformar datos
+
+Es útil si necesitas manipular el objeto o convertirlo en otro formato, como un array o una cadena.
+
+Resumen
+	•	Object.entries() convierte un objeto en un array de arrays.
+	•	Esto te permite trabajar con las claves y valores del objeto de manera más flexible.
 
